@@ -102,3 +102,25 @@
   opacity: 0.7;
 }
 
+/* MOBILE VIEW CLEAN NAVBAR */
+@media only screen and (max-width: 500px) {
+  .navbar-center-links,
+  .navbar-resume {
+    display: none !important;
+  }
+
+  .header {
+    width: 100%;
+    padding: 20px;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transform: none;
+  }
+
+  .navbar-title {
+    font-size: 16px;
+    text-align: center;
+  }
+}
