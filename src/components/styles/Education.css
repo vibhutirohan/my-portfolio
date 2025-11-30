@@ -1,0 +1,116 @@
+/* Section Container */
+.education-section {
+  width: 100%;
+  padding: 160px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title */
+.education-title {
+  font-size: 70px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 100px;
+  background: linear-gradient(0deg, #7f40ff, #ffffff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.education-title span {
+  font-weight: 300;
+}
+
+/* Timeline Container */
+.education-timeline {
+  width: 70%;
+  position: relative;
+  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+/* Vertical Line */
+.education-timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(#a855ff, #d9a8ff, transparent);
+  border-radius: 10px;
+}
+
+/* Card Container */
+.edu-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 35px 40px;
+  border-radius: 18px;
+  backdrop-filter: blur(12px);
+  transition: 0.3s ease;
+  transform: translateX(0px);
+  cursor: pointer;
+}
+
+/* Card Hover Effects */
+.edu-card:hover {
+  transform: translateX(15px);
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 25px rgba(168, 85, 255, 0.4);
+}
+
+/* Timeline Dot */
+.edu-dot {
+  position: absolute;
+  left: -28px;
+  top: 25px;
+  width: 16px;
+  height: 16px;
+  background: #a855ff;
+  border-radius: 50%;
+  box-shadow: 0 0 12px #c084fc, 0 0 35px #e9d5ff;
+}
+
+/* Text Styling */
+.edu-content h3 {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.edu-content h4 {
+  font-size: 18px;
+  color: var(--accentColor);
+  margin-bottom: 18px;
+}
+
+.edu-cgpa-box {
+  font-size: 19px;
+  padding: 10px 18px;
+  width: fit-content;
+  border-radius: 10px;
+  background: rgba(168, 85, 255, 0.15);
+  border: 1px solid rgba(168, 85, 255, 0.3);
+}
+
+.edu-cgpa-box span {
+  opacity: 0.8;
+}
+
+@media (max-width: 800px) {
+  .education-timeline {
+    width: 90%;
+  }
+
+  .edu-content h3 {
+    font-size: 26px;
+  }
+
+  .edu-card {
+    padding: 30px;
+  }
+}

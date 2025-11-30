@@ -1,0 +1,31 @@
+.about-section {
+  width: 100%;
+  color: white;
+}
+
+.about-text {
+  max-width: 500px;
+}
+
+.about-text h2 {
+  color: #b282ff;
+  letter-spacing: 4px;
+  font-size: 28px;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.about-text p {
+  font-size: 20px;
+  line-height: 1.7;
+  opacity: 0.9;
+  text-align: left;
+}
+
+@media (max-width: 1024px) {
+  .about-text h2,
+  .about-text p {
+    text-align: center;
+  }
+}

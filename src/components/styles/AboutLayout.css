@@ -1,0 +1,38 @@
+.about-wrapper {
+  width: 85%;
+  margin: 0 auto;
+  padding: 150px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+}
+
+.about-left {
+  flex: 1;
+  max-width: 480px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-right {
+  flex: 1.2;
+}
+
+/* MOBILE */
+@media (max-width: 1024px) {
+  .about-wrapper {
+    flex-direction: column;
+    gap: 40px;
+    padding: 100px 0;
+  }
+
+  .about-left {
+    max-width: 320px;
+  }
+
+  .about-right {
+    width: 90%;
+    text-align: center;
+  }
+}
