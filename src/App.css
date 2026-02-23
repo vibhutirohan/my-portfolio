@@ -1,5 +1,12 @@
 .section-container {
   width: 1300px;
+  max-width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  .section-container {
+    width: 100%;
+  }
 }
 .title,
 .para {

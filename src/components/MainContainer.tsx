@@ -63,7 +63,7 @@ const MainContainer = ({ children }: PropsWithChildren) => {
       <WhatIDo />
 
       {/* Education */}
-      <div style={{ marginTop: "120px" }}>
+      <div className="education-section-wrapper">
         <Education />
       </div>
 

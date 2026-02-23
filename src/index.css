@@ -32,7 +32,8 @@ h6 {
   font-family: "Geist", sans-serif;
 }
 body {
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 a {
   color: inherit;
@@ -150,5 +151,26 @@ body {
 @media screen and (max-width: 900px) {
   .techstack h2 {
     font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .techstack h2 {
+    font-size: 28px;
+    top: 80px;
+  }
+  .techstack {
+    padding-top: 100px;
+    padding-bottom: 80px;
+    min-height: 80vh;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .techstack h2 {
+    font-size: 24px;
+  }
+  :root {
+    --cWidth: calc(100% - 20px);
   }
 }

@@ -566,7 +566,7 @@ a.contact-social:hover {
   color: var(--accentColor);
 }
 
-/* Mobile */
+/* Tablet */
 @media (max-width: 900px) {
   .contact-card {
     width: 92%;
@@ -585,5 +585,55 @@ a.contact-social:hover {
 
   .contact-title {
     font-size: 45px;
+  }
+
+  .contact-section {
+    padding: 100px 20px 80px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .contact-section {
+    padding: 80px 16px 60px;
+  }
+
+  .contact-title {
+    font-size: 32px;
+  }
+
+  .contact-subtitle {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .contact-card {
+    width: 95%;
+    padding: 24px 20px;
+  }
+
+  .contact-card h3 {
+    font-size: 20px;
+  }
+
+  .google-form-left span {
+    font-size: 18px;
+  }
+
+  .google-form-left p {
+    font-size: 12px;
+  }
+
+  .footer-section {
+    gap: 30px;
+    margin-top: 60px;
+  }
+
+  .site-footer {
+    padding: 30px 20px;
+  }
+
+  .site-footer p {
+    font-size: 16px;
   }
 }

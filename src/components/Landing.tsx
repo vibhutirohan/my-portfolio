@@ -1,16 +1,62 @@
-import { PropsWithChildren } from "react";
+import { PropsWithChildren, useEffect, useRef } from "react";
 import "./styles/Landing.css";
 import { config } from "../config";
+import gsap from "gsap";
+import SplitType from "split-type";
 
 const Landing = ({ children }: PropsWithChildren) => {
   const nameParts = config.developer.fullName.split(" ");
   const firstName = nameParts[0] || config.developer.name;
   const lastName = nameParts.slice(1).join(" ") || "";
+  const landingRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // 1. Split Text into characters
+    const titleText = new SplitType(".landing-intro h1", { types: "chars" });
+    const engineerText = new SplitType(".landing-h2-1", { types: "chars" });
+    const developerText = new SplitType(".landing-h2-info", { types: "chars" });
+
+    // Ensure they start hidden
+    gsap.set([titleText.chars, engineerText.chars, developerText.chars], {
+      opacity: 0,
+      y: 5,
+    });
+
+    const tl = gsap.timeline({ delay: 0.2 });
+
+    // Type out Name
+    tl.to(titleText.chars, {
+      opacity: 1,
+      y: 0,
+      stagger: 0.03,
+      duration: 0.1,
+      ease: "power1.out",
+    })
+      // Type out "Engineer"
+      .to(engineerText.chars, {
+        opacity: 1,
+        y: 0,
+        stagger: 0.03,
+        duration: 0.1,
+        ease: "power1.out",
+      }, "+=0.2")
+      // Type out "Developer"
+      .to(developerText.chars, {
+        opacity: 1,
+        y: 0,
+        stagger: 0.03,
+        duration: 0.1,
+        ease: "power1.out",
+      }, "-=0.1");
+
+    return () => {
+      tl.kill();
+    };
+  }, []);
 
   return (
     <>
-      {/* ⭐ FIXED — Correct home anchor */}
-      <div id="home" className="landing-section">
+      <div id="home" className="landing-section" ref={landingRef}>
         <div className="landing-container">
           <div className="landing-intro">
             <h2>Hello! I'm</h2>
@@ -24,11 +70,11 @@ const Landing = ({ children }: PropsWithChildren) => {
             <h3>A Creative</h3>
 
             <h2 className="landing-info-h2">
-              <div className="landing-h2-1">Engineer</div>
+              <div className="landing-h2-1">ENGINEER</div>
             </h2>
 
             <h2>
-              <div className="landing-h2-info">Developer</div>
+              <div className="landing-h2-info">DEVELOPER</div>
             </h2>
           </div>
         </div>

@@ -16,10 +16,11 @@ export const config = {
   about: {
     title: "Who I Am",
     description: `
-I’m a developer passionate about building intelligent, scalable, and high-performance systems.  
-My experience spans full-stack application development, cloud-based data engineering pipelines, and machine learning solutions that address real-world challenges.
+I'm an engineer who loves turning messy data into clean, functional software. I specialize in building full-stack applications and architecting the cloud pipelines that power them behind the scenes.
 
-I blend creativity with strong engineering discipline to design software and data systems that are clean, reliable, and optimized for performance. Whether it’s architecting end-to-end workflows, developing modern web applications, or integrating AI-driven features, I focus on delivering products that are both impactful and enjoyable to use.
+In the past few years, I have worked across the stack from developing responsive React interfaces and secure APIs, to training machine learning models and engineering reliable Python data pipelines for real-world production systems. 
+
+I'm naturally curious. Whether I'm debugging complex cloud deployments or building AI agents from scratch using LLMs, I care deeply about writing clean, maintainable code that actually solves user problems without over-engineering the solution.
 `
   },
 
@@ -46,9 +47,24 @@ I blend creativity with strong engineering discipline to design software and dat
      ============================ */
   experiences: [
     {
+      position: "Data Science Intern",
+      company: "Kitme Inc",
+      period: "Jan 2026 – Present",
+      location: "New York, United States",
+      description:
+        "Debugging and fixing production-grade logging and API issues.",
+      responsibilities: [
+        "Debugged and fixed production-grade issues in the Python API",
+        "Investigated logging severity mismatches in Google Cloud Logging",
+        "Audited Django logging configuration",
+        "Implemented correct stdout/stderr routing to INFO logs"
+      ],
+      technologies: ["Python", "Django", "Google Cloud", "Logging"]
+    },
+    {
       position: "AI Automation Engineer – Extern",
       company: "Wayfair (Externship Program)",
-      period: "Oct 2025 – Present",
+      period: "Oct 2025 – Dec 2025",
       location: "Remote",
       description:
         "Designed AI automation workflows using Python, LangChain, and OpenAI API to accelerate business intelligence.",
@@ -106,12 +122,30 @@ I blend creativity with strong engineering discipline to design software and dat
      ============================ */
   projects: [
     {
+      id: 6,
+      title: "Treasure Hunt in a Foggy World",
+      category: "AI Pathfinding & Reinforcement Learning",
+      technologies:
+        "Python, Flask, WebSockets, Chart.js, Q-learning, BFS/DFS, A*",
+      image: "/images/treasure_hunt_foggy.png",
+      github: "https://github.com/vibhutirohan/Treasure-Hunt-in-a-Foggy-World"
+    },
+    {
+      id: 7,
+      title: "Flood Risk Prediction",
+      category: "Machine Learning",
+      technologies:
+        "Python, FastAPI, Streamlit, Scikit-learn",
+      image: "/images/urban_crash_radar.png",
+      github: "https://github.com/vibhutirohan/Flood-Risk-Prediction"
+    },
+    {
       id: 1,
       title: "Urban Crash Risk Radar",
       category: "Data Engineering • AWS",
       technologies:
         "AWS S3, Glue ETL, Athena, Parquet, Data Modeling, Python, QuickSight",
-      image: "/images/urban.webp",
+      image: "/images/carcrash.png",
       github: "https://github.com/vibhutirohan/urban-crash-risk-radar"
     },
     {
@@ -125,7 +159,7 @@ I blend creativity with strong engineering discipline to design software and dat
     },
     {
       id: 3,
-      title: "Emotion Detection Using CNN",
+      title: "Emotion Detection Using CNN Algorithm",
       category: "Deep Learning",
       technologies: "TensorFlow, Keras, OpenCV, CNN, Image Augmentation",
       image: "/images/emotion.png",
@@ -137,7 +171,7 @@ I blend creativity with strong engineering discipline to design software and dat
       category: "AI / Automation",
       technologies: "Python, LangChain, n8n, OpenAI API, REST Integrations",
       image: "/images/ai.png",
-      
+
     },
     {
       id: 5,
@@ -146,7 +180,7 @@ I blend creativity with strong engineering discipline to design software and dat
       technologies:
         "React, Node.js, Java, Spring Boot, MySQL, Docker, REST APIs",
       image: "/images/full stack.png",
-      
+
     }
   ],
 
@@ -160,7 +194,7 @@ I blend creativity with strong engineering discipline to design software and dat
     twitter: "https://x.com/vibhutirohan",
     instagram: "https://www.instagram.com/rohan_vibhuti_/",
     googleForm:
-      "https://docs.google.com/forms/d/1wROOkZ17HU1BYRZtBp4OHi8DCPoWlWHZk-qrDUwXwKk/edit"
+      "https://docs.google.com/forms/d/1wROOkZ17HU1BYRZtBp4OHi8DCPoWlWHZk-qrDUwXwKk/viewform"
   },
 
   /* ============================
@@ -173,15 +207,21 @@ I blend creativity with strong engineering discipline to design software and dat
       details:
         "Experience building stable, production-ready applications across the frontend, backend, and cloud.",
       tools: [
+        "Python",
         "Java",
-        "Spring Boot",
-        "React",
-        "Node.js",
-        "Express.js",
         "JavaScript",
-        "Git/GitHub",
-        "MySQL",
-        "Docker"
+        "TypeScript",
+        "SQL",
+        "R",
+        "C++",
+        "React",
+        "Angular",
+        "Node.js",
+        "Spring Boot",
+        "Docker",
+        "CI/CD",
+        "REST APIs",
+        "Git"
       ]
     },
 
@@ -191,15 +231,21 @@ I blend creativity with strong engineering discipline to design software and dat
       details:
         "Skilled in cloud data pipelines, ETL workflows, predictive modeling, and intelligent automation.",
       tools: [
-        "Python",
-        "TensorFlow",
-        "Keras",
-        "PyTorch",
         "AWS",
+        "GCP",
         "PySpark",
+        "TensorFlow",
+        "PyTorch",
+        "LangChain",
+        "OpenAI API",
+        "Deep Learning",
+        "NLP",
         "Airflow",
-        "Pandas",
-        "NumPy"
+        "MySQL",
+        "MongoDB",
+        "Streamlit",
+        "Power BI",
+        "n8n"
       ]
     }
   }

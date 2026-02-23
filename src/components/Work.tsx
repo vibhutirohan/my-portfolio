@@ -2,13 +2,27 @@ import "./styles/Work.css";
 import WorkImage from "./WorkImage";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { config } from "../config";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const MOBILE_BREAKPOINT = 1024;
+
 const Work = () => {
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth > MOBILE_BREAKPOINT);
+
   useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth > MOBILE_BREAKPOINT);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    if (!isDesktop) return;
+
     let translateX: number = 0;
 
     function setTranslateX() {
@@ -51,10 +65,10 @@ const Work = () => {
       timeline.kill();
       ScrollTrigger.getById("work")?.kill();
     };
-  }, []);
+  }, [isDesktop]);
 
   return (
-    <div className="work-section" id="work">
+    <div className={`work-section ${!isDesktop ? "work-mobile" : ""}`} id="work">
       <div className="work-container section-container">
         <h2>
           My <span>Projects</span>
@@ -75,6 +89,14 @@ const Work = () => {
 
                 <h4>Tools and features</h4>
                 <p>{project.technologies}</p>
+
+                {project.description && (
+                  <ul className="project-desc" style={{ paddingLeft: "1.2rem", margin: "10px 0", fontSize: "14px", color: "#ccc" }}>
+                    {project.description.map((desc: string, i: number) => (
+                      <li key={i} style={{ marginBottom: "6px" }}>{desc}</li>
+                    ))}
+                  </ul>
+                )}
 
                 {/* Button still works too */}
                 {project.github && (

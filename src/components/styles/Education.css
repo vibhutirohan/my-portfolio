@@ -1,6 +1,24 @@
 /* Section Container */
+.education-section-wrapper {
+  margin-top: 120px;
+}
+
+@media (max-width: 768px) {
+  .education-section-wrapper {
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .education-section-wrapper {
+    margin-top: 60px;
+  }
+}
+
 .education-section {
   width: 100%;
+  max-width: var(--cMaxWidth);
+  margin: 0 auto;
   padding: 160px 0;
   display: flex;
   flex-direction: column;
@@ -15,6 +33,7 @@
   margin-bottom: 100px;
   background: linear-gradient(0deg, #7f40ff, #ffffff);
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
 }
 
@@ -25,6 +44,8 @@
 /* Timeline Container */
 .education-timeline {
   width: 70%;
+  max-width: 800px;
+  margin: 0 auto;
   position: relative;
   padding-left: 40px;
   display: flex;
@@ -102,8 +123,19 @@
 }
 
 @media (max-width: 800px) {
+  .education-section {
+    padding: 100px 20px 80px;
+  }
+
+  .education-title {
+    font-size: 48px;
+    margin-bottom: 60px;
+  }
+
   .education-timeline {
     width: 90%;
+    padding-left: 32px;
+    gap: 50px;
   }
 
   .edu-content h3 {
@@ -112,5 +144,45 @@
 
   .edu-card {
     padding: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .education-section {
+    padding: 80px 16px 60px;
+  }
+
+  .education-title {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+
+  .education-timeline {
+    width: 95%;
+    padding-left: 28px;
+    gap: 36px;
+  }
+
+  .edu-content h3 {
+    font-size: 22px;
+  }
+
+  .edu-content h4 {
+    font-size: 16px;
+  }
+
+  .edu-cgpa-box {
+    font-size: 16px;
+    padding: 8px 14px;
+  }
+
+  .edu-card {
+    padding: 24px 20px;
+  }
+
+  .edu-dot {
+    width: 12px;
+    height: 12px;
+    left: -24px;
   }
 }
