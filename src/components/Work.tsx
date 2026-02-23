@@ -90,9 +90,9 @@ const Work = () => {
                 <h4>Tools and features</h4>
                 <p>{project.technologies}</p>
 
-                {project.description && (
+                {(project as any).description && (
                   <ul className="project-desc" style={{ paddingLeft: "1.2rem", margin: "10px 0", fontSize: "14px", color: "#ccc" }}>
-                    {project.description.map((desc: string, i: number) => (
+                    {(project as any).description.map((desc: string, i: number) => (
                       <li key={i} style={{ marginBottom: "6px" }}>{desc}</li>
                     ))}
                   </ul>
