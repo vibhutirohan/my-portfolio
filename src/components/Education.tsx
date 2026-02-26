@@ -16,7 +16,14 @@ const Education = () => {
             <div className="edu-content">
               <h3>{edu.degree}</h3>
               <h4>
-                {edu.institution} • {edu.period}
+                {edu.url ? (
+                  <a href={edu.url} target="_blank" rel="noopener noreferrer" className="edu-link">
+                    {edu.institution}
+                  </a>
+                ) : (
+                  edu.institution
+                )}
+                {" "}• {edu.period}
               </h4>
 
               <div className="edu-cgpa-box">

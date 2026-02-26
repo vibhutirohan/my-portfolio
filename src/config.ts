@@ -31,12 +31,14 @@ I'm naturally curious. Whether I'm debugging complex cloud deployments or buildi
     {
       degree: "Master of Science in Data Science",
       institution: "University of New Haven",
+      url: "https://www.newhaven.edu/index.php",
       period: "2024 – 2026",
       cgpa: "3.6 / 4.0"
     },
     {
       degree: "Bachelor of Engineering in Information Science & Engineering",
       institution: "Sapthagiri College of Engineering",
+      url: "https://www.sapthagiri.edu.in/",
       period: "2019 – 2023",
       cgpa: "8.6 / 10"
     }

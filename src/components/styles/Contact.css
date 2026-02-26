@@ -150,6 +150,7 @@ a.contact-social:hover::after {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -161,9 +162,11 @@ a.contact-social:hover::after {
   .contact-section h3 {
     font-size: 50px;
   }
+
   .contact-box h2 {
     font-size: 20px;
   }
+
   a.contact-social {
     font-size: 20px;
   }
@@ -173,9 +176,11 @@ a.contact-social:hover::after {
   .contact-section h3 {
     font-size: 40px;
   }
+
   .contact-box h2 {
     font-size: 18px;
   }
+
   a.contact-social {
     font-size: 18px;
   }
@@ -185,14 +190,17 @@ a.contact-social:hover::after {
   .contact-flex {
     flex-direction: column;
   }
+
   .contact-section {
     margin-top: 50px;
     padding-bottom: 50px;
   }
+
   .contact-container {
     width: calc(100% - 25px);
   }
 }
+
 /* ----------------------------
           FOOTER
 ------------------------------ */
@@ -232,11 +240,13 @@ a.contact-social:hover::after {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
 /* 3-column layout */
 .contact-flex {
   display: flex;
@@ -308,11 +318,13 @@ a.contact-social:hover::after {
     flex-direction: column;
     align-items: center;
   }
+
   .center-box,
   .contact-box {
     width: 100%;
     text-align: center;
   }
+
   .contact-form {
     width: 100%;
   }
@@ -332,6 +344,7 @@ a.contact-social:hover::after {
   color: var(--accentColor);
   font-weight: 600;
 }
+
 .contact-section {
   margin: auto;
   padding-bottom: 150px;
@@ -449,6 +462,7 @@ a.contact-social:hover {
     font-size: 40px;
   }
 }
+
 .contact-section {
   text-align: center;
   padding: 150px 0 120px;
@@ -555,6 +569,22 @@ a.contact-social:hover {
 
 .footer-box a:hover {
   color: var(--accentColor);
+}
+
+.footer-map {
+  margin-top: 15px;
+  width: 200px;
+  /* Set a fixed width for the map */
+  max-width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.footer-map:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(168, 85, 255, 0.3);
 }
 
 .footer-copy {

@@ -49,7 +49,7 @@ const Contact = () => {
       <h2 className="contact-title">Get In <span>Touch</span></h2>
 
       <p className="contact-subtitle">
-        Prefer a quick, reliable way? Use my Google Form to reach me directly.  
+        Prefer a quick, reliable way? Use my Google Form to reach me directly.
         I typically respond within <strong>24 – 48 hours.</strong>
       </p>
 
@@ -82,6 +82,18 @@ const Contact = () => {
 
           <h4>Location</h4>
           <p>{config.social.location}</p>
+          <div className="footer-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d382645.7594911762!2d-73.19793108603612!3d41.608381987588394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e65311f21151a5%3A0xe67397b91316b1dc!2sConnecticut%2C%20USA!5e0!3m2!1sen!2sin!4v1714454157582!5m2!1sen!2sin"
+              width="100%"
+              height="100"
+              style={{ border: 0, borderRadius: "8px", marginTop: "10px" }}
+              allowFullScreen={false}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Connecticut Location Map"
+            ></iframe>
+          </div>
         </div>
 
         <div className="footer-box">
@@ -94,7 +106,7 @@ const Contact = () => {
 
         <div className="footer-box">
           <p className="footer-copy">
-            <MdCopyright /> {new Date().getFullYear()}  
+            <MdCopyright /> {new Date().getFullYear()}
             <br />
             Designed & Built by <span>{config.developer.fullName}</span>
           </p>
