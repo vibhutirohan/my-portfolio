@@ -316,26 +316,50 @@ h2.landing-info-h2 {
 
 /* Mobile-first: smaller screens */
 @media screen and (max-width: 480px) {
+  .landing-intro {
+    top: 16%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
+  }
+
   .landing-intro h2 {
-    font-size: 14px;
+    font-size: 16px;
+    margin-bottom: 5px;
   }
 
   .landing-intro h1 {
-    font-size: 22px;
-    line-height: 26px;
+    font-size: 38px;
+    line-height: 42px;
+  }
+
+  .landing-info {
+    bottom: auto;
+    top: 35%;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .landing-info h3 {
-    font-size: 14px;
+    font-size: 18px;
   }
 
   .landing-info h2 {
-    font-size: 22px;
-    line-height: 28px;
+    font-size: 28px;
+    line-height: 34px;
+    margin-left: 0;
+    justify-content: center;
   }
 
   h2.landing-info-h2 {
-    font-size: 26px;
+    font-size: 32px;
   }
 
   .character-model {

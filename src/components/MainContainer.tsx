@@ -10,6 +10,7 @@ import WhatIDo from "./WhatIDo";
 import Work from "./Work";
 import setSplitText from "./utils/splitText";
 import Education from "./Education";
+import Chatbot from "./Chatbot";
 import "./styles/AboutLayout.css";
 
 const TechStack = lazy(() => import("./TechStack"));
@@ -80,6 +81,9 @@ const MainContainer = ({ children }: PropsWithChildren) => {
 
       {/* Contact */}
       <Contact />
+
+      {/* Globally persistent Chatbot */}
+      <Chatbot />
     </div>
   );
 };
