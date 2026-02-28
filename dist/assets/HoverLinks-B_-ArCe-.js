@@ -1,0 +1,1 @@
+import{j as s}from"./index-fCHVNa8e.js";const a=({text:r,cursor:i})=>s.jsx("div",{className:"hover-link","data-cursor":!i&&"disable",children:s.jsxs("div",{className:"hover-in",children:[r," ",s.jsx("div",{children:r})]})});export{a as H};

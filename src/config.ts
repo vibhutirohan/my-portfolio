@@ -49,73 +49,68 @@ I'm naturally curious. Whether I'm debugging complex cloud deployments or buildi
      ============================ */
   experiences: [
     {
-      position: "Data Science Intern",
-      company: "Kitme Inc",
-      period: "Jan 2026 – Present",
-      location: "New York, United States",
-      description:
-        "Debugging and fixing production-grade logging and API issues.",
-      responsibilities: [
-        "Debugged and fixed production-grade issues in the Python API",
-        "Investigated logging severity mismatches in Google Cloud Logging",
-        "Audited Django logging configuration",
-        "Implemented correct stdout/stderr routing to INFO logs"
+      id: 'kitme',
+      title: 'Data Science Intern',
+      company: 'Kitme Inc',
+      location: 'New York, United States',
+      startDate: 'Jan 2026',
+      endDate: 'Present',
+      current: true,
+      description: 'Working on production-grade data science and engineering challenges, debugging and optimizing Python APIs and cloud infrastructure.',
+      achievements: [
+        'Debugging and fixing production-grade issues in the Python API, improving system reliability and error handling',
+        'Investigating logging severity mismatches in Google Cloud Logging, ensuring proper log classification for monitoring',
+        'Auditing Django logging configuration and implementing correct stdout/stderr routing to INFO logs for better observability'
       ],
-      technologies: ["Python", "Django", "Google Cloud", "Logging"]
+      stack: ['Python', 'Django', 'Google Cloud', 'Cloud Logging', 'APIs']
     },
     {
-      position: "AI Automation Engineer – Extern",
-      company: "Wayfair (Externship Program)",
-      period: "Oct 2025 – Dec 2025",
-      location: "Remote",
-      description:
-        "Designed AI automation workflows using Python, LangChain, and OpenAI API to accelerate business intelligence.",
-      responsibilities: [
-        "Built AI agents for trend discovery and competitor monitoring",
-        "Integrated LangChain + n8n for automated intelligence pipelines",
-        "Reduced manual research time by 50% using AI automation",
-        "Enabled near real-time insights for business strategy"
+      id: 'extern-ai',
+      title: 'AI Automation Engineer',
+      company: 'Extern',
+      location: 'Remote',
+      startDate: 'Oct 2025',
+      endDate: 'Dec 2025',
+      current: false,
+      description: 'Designed and automated AI agents for consumer trend discovery and competitor monitoring, enabling real-time market intelligence.',
+      achievements: [
+        'Designed and automated AI agents using Python and OpenAI API to automate consumer trend discovery and competitor monitoring',
+        'Enabled real-time market intelligence and business insights through automated data collection and analysis',
+        'Built automated pipelines for continuous monitoring of market trends and competitor activities'
       ],
-      technologies: ["Python", "LangChain", "OpenAI API", "n8n", "LLMs"]
+      stack: ['Python', 'OpenAI API', 'LangChain', 'n8n', 'AI Agents', 'LLMs']
     },
-
     {
-      position: "Software Developer Intern",
-      company: "Uplaud Inc.",
-      period: "May 2025 – Aug 2025",
-      location: "Austin, TX (Remote)",
-      description:
-        "Built front-end and authentication features used by real customers across mobile and web.",
-      responsibilities: [
-        "Developed WhatsApp OTP login using React + Twilio API",
-        "Improved mobile UI/UX responsiveness across devices",
-        "Increased accessibility with adaptive layouts",
-        "Strengthened authentication security and validation flows"
+      id: 'uplaud',
+      title: 'Software Developer Intern',
+      company: 'Uplaud Inc',
+      location: 'Austin, Texas, United States',
+      startDate: 'May 2025',
+      endDate: 'Aug 2025',
+      current: false,
+      description: 'Engineered WhatsApp OTP authentication flow using React and Twilio API, enhancing user login experience with comprehensive validation.',
+      achievements: [
+        'Engineered WhatsApp OTP authentication flow using React and Twilio API, enhancing user login experience through comprehensive edge-case validation',
+        'Implemented realistic user journey mapping to identify and handle all authentication edge cases',
+        'Integrated frontend with backend using Airtable to store and retrieve user profiles on login and return visits'
       ],
-      technologies: ["React", "JavaScript", "Twilio API", "Responsive UI"]
+      stack: ['React', 'Twilio API', 'WhatsApp API', 'Airtable', 'JavaScript', 'TypeScript']
     },
-
     {
-      position: "Full Stack Developer Intern",
-      company: "Cognizant Technology Solutions",
-      period: "Dec 2023 – Jul 2024",
-      location: "Chennai, India",
-      description:
-        "Built enterprise-grade applications and backend APIs for production environments.",
-      responsibilities: [
-        "Developed full-stack applications (Java, Spring Boot, AngularJS)",
-        "Optimized MySQL queries, reducing load times by 30%",
-        "Built and deployed production REST APIs",
-        "Refactored codebases for modularity and performance"
+      id: 'cognizant',
+      title: 'Full Stack Developer Intern',
+      company: 'Cognizant Technology Solutions',
+      location: 'Chennai, India',
+      startDate: 'Dec 2023',
+      endDate: 'Jul 2024',
+      current: false,
+      description: 'Architected enterprise-grade full-stack applications serving production traffic for multiple business-critical operations.',
+      achievements: [
+        'Architected enterprise-grade full-stack applications using Java, Spring Boot, Maven, and AngularJS with MySQL database',
+        'Served production traffic for multiple business-critical operations with high availability and performance',
+        'Enhanced application performance through database query optimization and code refactoring, reducing average page load times by 30%'
       ],
-      technologies: [
-        "Java",
-        "Spring Boot",
-        "AngularJS",
-        "MySQL",
-        "REST APIs",
-        "Maven"
-      ]
+      stack: ['Java', 'Spring Boot', 'Maven', 'AngularJS', 'MySQL', 'REST APIs', 'Agile']
     }
   ],
 

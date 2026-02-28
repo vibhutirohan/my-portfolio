@@ -1,0 +1,132 @@
+.beyond-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 100px 0;
+    position: relative;
+    z-index: 99;
+}
+
+.beyond-container {
+    width: var(--cWidth);
+    max-width: var(--cMaxWidth);
+    margin: 0 auto;
+}
+
+.beyond-title {
+    font-size: calc(3vw + 20px);
+    font-weight: 600;
+    margin-bottom: 50px;
+    color: #fff;
+    text-align: center;
+}
+
+.title-accent {
+    color: var(--accentColor);
+    /* Purple styling to match existing theme */
+}
+
+.beyond-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.beyond-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: transform 0.3s ease, background 0.3s ease, border 0.3s ease;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.beyond-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(196, 129, 255, 0.5);
+}
+
+.beyond-icon-wrapper {
+    width: 70px;
+    height: 70px;
+    background: rgba(196, 129, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px auto;
+}
+
+.beyond-icon {
+    font-size: 30px;
+    color: #c481ff;
+    /* theme accent color */
+}
+
+.beyond-card h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.beyond-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.beyond-philosophy {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 40px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.beyond-philosophy h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.beyond-philosophy p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+    .beyond-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .beyond-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .beyond-section {
+        padding: 60px 0;
+    }
+
+    .beyond-title {
+        font-size: 36px;
+        margin-bottom: 30px;
+    }
+
+    .beyond-philosophy {
+        padding: 30px 20px;
+    }
+}

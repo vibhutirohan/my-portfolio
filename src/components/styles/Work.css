@@ -65,8 +65,13 @@
   background: rgba(255, 255, 255, 0.4);
 }
 
-.work-flex .work-box:nth-child(even) {
-  flex-direction: column-reverse;
+/* Better to use order instead of column-reverse to preserve bottom padding and scrollability */
+.work-flex .work-box:nth-child(even) .work-info {
+  order: 2;
+}
+
+.work-flex .work-box:nth-child(even) .work-image-click {
+  order: 1;
 }
 
 .work-flex::before,
@@ -301,8 +306,9 @@
     border-bottom: none;
   }
 
-  .work-section.work-mobile .work-flex .work-box:nth-child(even) {
-    flex-direction: column !important;
+  .work-section.work-mobile .work-flex .work-box:nth-child(even) .work-info,
+  .work-section.work-mobile .work-flex .work-box:nth-child(even) .work-image-click {
+    order: unset;
   }
 
   .work-section.work-mobile .work-title h3 {

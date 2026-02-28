@@ -3,6 +3,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import HoverLinks from "./HoverLinks";
 import { gsap } from "gsap";
 import Lenis from "lenis";
+import { Link, useLocation } from "react-router-dom";
 import "./styles/Navbar.css";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -10,6 +11,9 @@ export let lenis: Lenis | null = null;
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const isHome = location.pathname === "/";
+
   useEffect(() => {
     // Initialize Lenis smooth scroll
     lenis = new Lenis({
@@ -38,11 +42,14 @@ const Navbar = () => {
     links.forEach((elem) => {
       elem.addEventListener("click", (e) => {
         if (window.innerWidth > 1024) {
-          e.preventDefault();
           const link = e.currentTarget as HTMLAnchorElement;
+
+          // DO NOT prevent default or run Lenis if it's a structural React Router route (like /blog)
+          // Data-href is used for section IDs (like #about)
           const section = link.getAttribute("data-href");
 
-          if (section && lenis) {
+          if (section && section.startsWith("#") && lenis) {
+            e.preventDefault();
             const el = document.querySelector(section);
 
             if (el instanceof HTMLElement) {
@@ -69,9 +76,15 @@ const Navbar = () => {
     <>
       <div className="header">
         {/* LEFT SIDE — Name */}
-        <a href="/#" className="navbar-title" data-cursor="disable">
-          Rohan's Portfolio
-        </a>
+        {isHome ? (
+          <a href="#home" className="navbar-title" data-cursor="disable">
+            Rohan's Portfolio
+          </a>
+        ) : (
+          <Link to="/" className="navbar-title" data-cursor="disable">
+            Rohan's Portfolio
+          </Link>
+        )}
 
         {/* Mobile hamburger button */}
         <button
@@ -87,37 +100,43 @@ const Navbar = () => {
         {/* CENTER — Navigation Links */}
         <ul className={`navbar-center-links ${mobileMenuOpen ? "mobile-open" : ""}`}>
           <li>
-            <a data-href="#home" href="#home" onClick={() => setMobileMenuOpen(false)}>
+            <a data-href="#home" href={isHome ? "#home" : "/#home"} onClick={() => setMobileMenuOpen(false)}>
               <HoverLinks text="HOME" />
             </a>
           </li>
 
           <li>
-            <a data-href="#about" href="#about" onClick={() => setMobileMenuOpen(false)}>
+            <a data-href="#about" href={isHome ? "#about" : "/#about"} onClick={() => setMobileMenuOpen(false)}>
               <HoverLinks text="ABOUT" />
             </a>
           </li>
 
           <li>
-            <a data-href="#education" href="#education" onClick={() => setMobileMenuOpen(false)}>
+            <a data-href="#education" href={isHome ? "#education" : "/#education"} onClick={() => setMobileMenuOpen(false)}>
               <HoverLinks text="EDUCATION" />
             </a>
           </li>
 
           <li>
-            <a data-href="#career" href="#career" onClick={() => setMobileMenuOpen(false)}>
+            <a data-href="#career" href={isHome ? "#career" : "/#career"} onClick={() => setMobileMenuOpen(false)}>
               <HoverLinks text="CAREER" />
             </a>
           </li>
 
           <li>
-            <a data-href="#work" href="#work" onClick={() => setMobileMenuOpen(false)}>
+            <a data-href="#work" href={isHome ? "#work" : "/#work"} onClick={() => setMobileMenuOpen(false)}>
               <HoverLinks text="PROJECTS" />
             </a>
           </li>
 
           <li>
-            <a data-href="#contact" href="#contact" onClick={() => setMobileMenuOpen(false)}>
+            <Link to="/blog" onClick={() => setMobileMenuOpen(false)}>
+              <HoverLinks text="BLOG" />
+            </Link>
+          </li>
+
+          <li>
+            <a data-href="#contact" href={isHome ? "#contact" : "/#contact"} onClick={() => setMobileMenuOpen(false)}>
               <HoverLinks text="CONTACT" />
             </a>
           </li>

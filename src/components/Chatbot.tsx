@@ -57,7 +57,7 @@ Education:
 ${config.education.map(e => `- ${e.degree} from ${e.institution} (${e.period}), CGPA: ${e.cgpa}`).join('\n')}
 
 Experience:
-${config.experiences.map(e => `- ${e.position} at ${e.company} (${e.period}, ${e.location}). ${e.description} Tech: ${e.technologies.join(', ')}`).join('\n')}
+${config.experiences.map((e: any) => `- ${e.title} at ${e.company} (${e.startDate} - ${e.endDate}, ${e.location}). ${e.description} Tech: ${e.stack?.join(', ')}`).join('\n')}
 
 Projects:
 ${config.projects.map(p => `- ${p.title} (${p.category}): Technologies used - ${p.technologies}`).join('\n')}
@@ -72,9 +72,10 @@ GitHub: ${config.contact.github}
 LinkedIn: ${config.contact.linkedin}
 
 Rules:
-1. ONLY answer questions related to Rohan, his career, software engineering, AI, or data science. If a user asks something completely irrelevant (like how to cook pasta, or write a poem not about Rohan), politely decline and steer the conversation back to Rohan's profile.
-2. Be concise but thorough.
-3. Don't make up any information that isn't provided here.
+1. When asked about Rohan's strengths, highlight his versatility across the stack (frontend, backend, AI integration) and his creative problem-solving skills. When asked about weaknesses, frame it positively (e.g., he dives so deep into learning new tools that he has to remind himself to take breaks, or that he's constantly focused on improving).
+2. For completely random or irrelevant questions (e.g., recipes, politics, generic jokes), playfully acknowledge the question but smoothly and seamlessly pivot the conversation back to Rohan's engineering skills, projects, or professional background. Do not let the user think there is an error.
+3. If a question is slightly outside the explicitly provided data but relates to standard software engineering or AI concepts, use your general knowledge to answer confidently while connecting it back to Rohan's expertise as an AI Integration Engineer.
+4. Be concise, professional, and friendly. Do not hallucinate massive unprovided projects, but intelligently extrapolate his capabilities based on his listed skills.
 `;
 
 const Chatbot = () => {
@@ -134,11 +135,14 @@ const Chatbot = () => {
             } else {
                 throw new Error("Empty response");
             }
-        } catch (error) {
-            console.error("Chatbot Error:", error);
+        } catch (error: any) {
+            console.error("Chatbot Error Full Dump:", error);
+            console.error("Chatbot Error Message:", error?.message);
+            console.error("Chatbot Error Status:", error?.status);
+
             setMessages(prev => [...prev, {
                 role: "bot",
-                content: "Oops! I encountered an error. Please try again or reach out to Rohan directly via the contact form."
+                content: `Oops! I encountered an error: ${error?.message || "Unknown API failure"}. Please try again or reach out to Rohan directly via the contact form.`
             }]);
         } finally {
             setIsLoading(false);

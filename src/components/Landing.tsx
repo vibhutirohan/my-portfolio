@@ -12,26 +12,35 @@ const Landing = ({ children }: PropsWithChildren) => {
 
   useEffect(() => {
     // 1. Split Text into characters
+    const greetingText = new SplitType(".landing-intro h2", { types: "chars" });
     const titleText = new SplitType(".landing-intro h1", { types: "chars" });
     const engineerText = new SplitType(".landing-h2-1", { types: "chars" });
     const developerText = new SplitType(".landing-h2-info", { types: "chars" });
 
     // Ensure they start hidden
-    gsap.set([titleText.chars, engineerText.chars, developerText.chars], {
+    gsap.set([greetingText.chars, titleText.chars, engineerText.chars, developerText.chars], {
       opacity: 0,
       y: 5,
     });
 
     const tl = gsap.timeline({ delay: 0.2 });
 
-    // Type out Name
-    tl.to(titleText.chars, {
+    // Type out "Hello! I'm"
+    tl.to(greetingText.chars, {
       opacity: 1,
       y: 0,
-      stagger: 0.03,
+      stagger: 0.08, // Significantly slower for greeting
       duration: 0.1,
       ease: "power1.out",
     })
+      // Type out Name
+      .to(titleText.chars, {
+        opacity: 1,
+        y: 0,
+        stagger: 0.05, // Slower for name
+        duration: 0.1,
+        ease: "power1.out",
+      }, "+=0.3")
       // Type out "Engineer"
       .to(engineerText.chars, {
         opacity: 1,

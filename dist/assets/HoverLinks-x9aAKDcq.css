@@ -1,0 +1,1 @@
+.hover-link{position:relative;display:flex;text-wrap:nowrap;overflow:hidden;line-height:1.2}.hover-in{position:relative;transition:.3s cubic-bezier(.25,1,.5,1);display:block}.hover-in div{display:block;position:absolute;top:100%;left:0;width:100%}.hover-link:hover .hover-in{transform:translateY(-100%);color:var(--accentColor)}

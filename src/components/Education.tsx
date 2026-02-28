@@ -18,10 +18,10 @@ const Education = () => {
               <h4>
                 {edu.url ? (
                   <a href={edu.url} target="_blank" rel="noopener noreferrer" className="edu-link">
-                    {edu.institution}
+                    🎓 {edu.institution}
                   </a>
                 ) : (
-                  edu.institution
+                  <>🎓 {edu.institution}</>
                 )}
                 {" "}• {edu.period}
               </h4>

@@ -11,6 +11,7 @@ import Work from "./Work";
 import setSplitText from "./utils/splitText";
 import Education from "./Education";
 import Chatbot from "./Chatbot";
+import BeyondTech from "./BeyondTech";
 import "./styles/AboutLayout.css";
 
 const TechStack = lazy(() => import("./TechStack"));
@@ -78,6 +79,9 @@ const MainContainer = ({ children }: PropsWithChildren) => {
       <Suspense fallback={<div>Loading.....</div>}>
         <TechStack />
       </Suspense>
+
+      {/* Beyond Technology */}
+      <BeyondTech />
 
       {/* Contact */}
       <Contact />
