@@ -1,5 +1,4 @@
 import { useState, useRef, useEffect } from "react";
-import { GoogleGenAI } from "@google/genai";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { config } from "../config";
@@ -98,16 +97,6 @@ const Chatbot = () => {
         setIsLoading(true);
 
         try {
-            // It's generally insecure to bundle API keys in the client, but since we have no backend,
-            // we must use the VITE_ prefixed environment variable directly.
-            const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
-
-            if (!apiKey) {
-                throw new Error("Gemini API key is missing from environment variables.");
-            }
-
-            const ai = new GoogleGenAI({ apiKey });
-
             // Build chat history for context
             const contents = messages.slice(1).map(msg => ({
                 role: msg.role === "bot" ? "model" : "user",
@@ -117,20 +106,28 @@ const Chatbot = () => {
             // Append current message
             contents.push({ role: "user", parts: [{ text: userMsg }] });
 
-            const response = await ai.models.generateContent({
-                model: "gemini-2.5-flash",
-                contents,
-                config: {
-                    systemInstruction: generateSystemInstruction(),
-                    temperature: 0.3, // Keep it professional and factual
-                }
+            const response = await fetch('/api/chat', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    contents,
+                    systemInstruction: generateSystemInstruction()
+                }),
             });
 
-            const responseText = response.text;
+            const data = await response.json();
+
+            if (!response.ok) {
+                throw new Error(data.error || "Failed to fetch response from server.");
+            }
+
+            const responseText = data.text;
             if (typeof responseText === "string") {
                 setMessages(prev => [...prev, { role: "bot", content: responseText }]);
             } else {
-                throw new Error("Empty response");
+                throw new Error("Empty response from server.");
             }
         } catch (error: any) {
             console.error("Chatbot Error Full Dump:", error);
