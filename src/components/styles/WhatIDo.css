@@ -20,22 +20,27 @@
   z-index: 9;
 }
 
-.what-box h2 {
-  font-size: calc(4vw + 25px);
-  line-height: calc(4vw + 20px);
+.what-title {
+  font-size: calc(3vw + 20px);
+  /* Reduced from 4vw + 25px */
+  line-height: calc(3vw + 25px);
+  /* Adjusted line height */
   font-weight: 600;
-  margin-right: 10%;
+  margin-right: 15%;
+  /* Increased margin to push it left away from the character */
   margin-bottom: 100px;
   position: relative;
   z-index: 99;
 }
 
-.hat-h2 {
-  font-style: italic;
+.what-i-text {
+  color: #ffffff;
+  /* Explicitly white */
 }
 
-.do-h2 {
+.do-text {
   color: var(--accentColor);
+  /* Assuming accentColor is the purple used throughout */
 }
 
 .what-box-in {
@@ -273,14 +278,18 @@
 }
 
 @media only screen and (max-width: 1600px) {
-  .what-box h2 {
-    margin-right: 18%;
+  .what-title {
+    margin-right: 25%;
+    /* Push further left on slightly smaller screens */
   }
 }
 
 @media only screen and (max-width: 1400px) {
-  .what-box h2 {
-    margin-right: 20%;
+  .what-title {
+    margin-right: 30%;
+    /* Push even further left */
+    font-size: calc(3vw + 15px);
+    /* Reduce font size further */
   }
 
   .what-box-in {
@@ -366,10 +375,13 @@
     flex-direction: column;
   }
 
-  .what-box h2 {
+  .what-title {
     margin: 50px 0;
-    font-size: 55px;
-    line-height: 53px;
+    font-size: 45px;
+    /* Reduced from 55px */
+    line-height: 50px;
+    margin-right: 0;
+    /* Reset margin for mobile stacked layout */
   }
 
   .what-box:first-child {
@@ -450,9 +462,10 @@
     width: 100%;
   }
 
-  .what-box h2 {
-    font-size: 36px;
-    line-height: 40px;
+  .what-title {
+    font-size: 32px;
+    /* Reduced from 36px */
+    line-height: 38px;
     margin: 30px 0;
   }
 
@@ -477,8 +490,9 @@
 }
 
 @media only screen and (min-width: 1950px) {
-  .what-box h2 {
-    font-size: 7rem;
-    line-height: 6.8rem;
+  .what-title {
+    font-size: 5.5rem;
+    /* Reduced from 7rem */
+    line-height: 6rem;
   }
 }

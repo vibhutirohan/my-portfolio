@@ -45,25 +45,27 @@ const Work = () => {
 
     setTranslateX();
 
-    let timeline = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".work-section",
-        start: "top top",
-        end: `+=${translateX}`,
-        scrub: true,
-        pin: true,
-        id: "work",
-      },
-    });
+    let ctx = gsap.context(() => {
+      let timeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".work-section",
+          start: "top top",
+          end: `+=${translateX}`,
+          scrub: true,
+          pin: true,
+          id: "work",
+        },
+      });
 
-    timeline.to(".work-flex", {
-      x: -translateX,
-      ease: "none",
+      timeline.to(".work-flex", {
+        x: -translateX,
+        ease: "none",
+      });
     });
 
     return () => {
-      timeline.kill();
-      ScrollTrigger.getById("work")?.kill();
+      ctx.revert();
+      ScrollTrigger.refresh();
     };
   }, [isDesktop]);
 

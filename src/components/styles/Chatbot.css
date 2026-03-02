@@ -14,8 +14,8 @@
 /* Floating Action Button */
 .chatbot-fab {
     pointer-events: auto;
-    width: 65px;
-    height: 65px;
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
     background: linear-gradient(135deg, #a855ff, #8a2be2);
     display: flex;

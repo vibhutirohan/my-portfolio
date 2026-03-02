@@ -25,9 +25,9 @@ const BeyondTech = () => {
                         <div className="beyond-icon-wrapper">
                             <FaUsers className="beyond-icon" />
                         </div>
-                        <h3>Volleyball</h3>
+                        <h3>Cricket</h3>
                         <p>
-                            Active volleyball player who values the communication and coordination
+                            Active cricket player who values the communication, strategy, and coordination
                             skills developed through team sports.
                         </p>
                     </div>

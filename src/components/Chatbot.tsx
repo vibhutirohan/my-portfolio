@@ -5,13 +5,9 @@ import remarkGfm from "remark-gfm";
 import { config } from "../config";
 import "./styles/Chatbot.css";
 
+import "./styles/AIAssistantBadge.css";
+
 // SVG Icons
-const SparklesIcon = () => (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="fab-icon">
-        <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
-        <path d="M5 3v4M3 5h4" />
-    </svg>
-);
 
 const CloseIcon = () => (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="fab-close-icon">
@@ -85,6 +81,7 @@ const Chatbot = () => {
     ]);
     const [input, setInput] = useState("");
     const [isLoading, setIsLoading] = useState(false);
+    const [isHovered, setIsHovered] = useState(false);
     const messagesEndRef = useRef<HTMLDivElement>(null);
 
     // Auto-scroll to bottom of chat
@@ -213,15 +210,31 @@ const Chatbot = () => {
                 </div>
             </div>
 
-            {/* Floating Action Button */}
-            <button
-                className={`chatbot-fab ${isOpen ? "open" : ""}`}
+            {/* Floating Action Button - Replaced with AI Assistant Emoji Component */}
+            <div
+                className={`chatbot-fab ai-badge-container ${isOpen ? "open" : ""}`}
                 onClick={() => setIsOpen(!isOpen)}
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
                 aria-label="Toggle chat"
             >
-                <SparklesIcon />
-                <CloseIcon />
-            </button>
+                {!isOpen && (
+                    <div className={`ai-badge-speech-bubble ${isHovered ? 'active' : ''}`}>
+                        <p>Hey, Rohan's AI Assistant here! <span className="wave-emoji">👋</span></p>
+                        <div className="speech-bubble-tail"></div>
+                    </div>
+                )}
+
+                <div className="ai-badge-avatar">
+                    {!isOpen && <div className="ai-badge-pulse-ring"></div>}
+                    <div className="ai-badge-bot-icon" style={{ opacity: isOpen ? 0 : 1, position: isOpen ? 'absolute' : 'relative', transition: 'opacity 0.3s' }}>
+                        🤖
+                    </div>
+                    <div style={{ opacity: isOpen ? 1 : 0, position: isOpen ? 'relative' : 'absolute', transition: 'opacity 0.3s', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                        <CloseIcon />
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };
