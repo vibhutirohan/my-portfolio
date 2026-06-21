@@ -144,7 +144,7 @@ const Navbar = () => {
           {/* Added Resume link for mobile view */}
           <li className="mobile-resume-link" style={window.innerWidth <= 768 ? { display: 'block' } : { display: 'none' }}>
             <a
-              href="https://drive.google.com/file/d/1XFfBjfYy0aNwanxyH0IxgcnuvFWdhiUf/view?usp=sharing"
+              href="https://drive.google.com/file/d/16ZlyjdCEK6UNQtFVbxUsdq4dz-6yoC8A/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMobileMenuOpen(false)}
@@ -156,7 +156,7 @@ const Navbar = () => {
 
         {/* RIGHT SIDE — Resume */}
         <a
-          href="https://drive.google.com/file/d/1XFfBjfYy0aNwanxyH0IxgcnuvFWdhiUf/view?usp=sharing"
+          href="https://drive.google.com/file/d/16ZlyjdCEK6UNQtFVbxUsdq4dz-6yoC8A/view?usp=sharing"
           className="navbar-resume"
           target="_blank"
           rel="noopener noreferrer"

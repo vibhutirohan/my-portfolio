@@ -101,7 +101,7 @@ const Work = () => {
                 )}
 
                 {/* Button still works too */}
-                {project.github && (
+                {project.github ? (
                   <a
                     href={project.github}
                     target="_blank"
@@ -111,19 +111,32 @@ const Work = () => {
                   >
                     View on GitHub ↗
                   </a>
+                ) : (
+                  <button
+                    disabled
+                    className="work-github-btn work-github-btn-disabled"
+                  >
+                    GitHub Coming Soon
+                  </button>
                 )}
               </div>
 
               {/* ⭐ Image Click Redirects to GitHub ⭐ */}
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="work-image-click"
-                data-cursor="disable"
-              >
-                <WorkImage image={project.image} alt={project.title} />
-              </a>
+              {project.github ? (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="work-image-click"
+                  data-cursor="disable"
+                >
+                  <WorkImage image={project.image} alt={project.title} />
+                </a>
+              ) : (
+                <div className="work-image-click-disabled">
+                  <WorkImage image={project.image} alt={project.title} />
+                </div>
+              )}
             </div>
           ))}
         </div>

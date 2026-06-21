@@ -199,7 +199,7 @@ const Contact = () => {
           <a href="#education">Education</a>
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
-          <a href="https://drive.google.com/file/d/1XFfBjfYy0aNwanxyH0IxgcnuvFWdhiUf/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a>
+          <a href="https://drive.google.com/file/d/16ZlyjdCEK6UNQtFVbxUsdq4dz-6yoC8A/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a>
         </div>
 
         <div className="footer-box">

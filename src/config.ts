@@ -49,20 +49,51 @@ I'm naturally curious. Whether I'm debugging complex cloud deployments or buildi
      ============================ */
   experiences: [
     {
-      id: 'kitme',
-      title: 'Data Science Intern',
-      company: 'Kitme Inc',
-      location: 'New York, United States',
-      startDate: 'Jan 2026',
+      id: 'nassau',
+      title: 'Data Engineering Intern',
+      company: 'Nassau Financial Group',
+      location: 'Hartford, Connecticut, United States',
+      startDate: 'Jun 2026',
       endDate: 'Present',
       current: true,
-      description: 'Working on production-grade data science and engineering challenges, debugging and optimizing Python APIs and cloud infrastructure.',
+      description:
+        'Working with the Enterprise Data Warehouse team on cloud-based data engineering, data governance, and lineage initiatives using AWS services and modern data pipeline workflows.',
       achievements: [
-        'Debugging and fixing production-grade issues in the Python API, improving system reliability and error handling',
-        'Investigating logging severity mismatches in Google Cloud Logging, ensuring proper log classification for monitoring',
-        'Auditing Django logging configuration and implementing correct stdout/stderr routing to INFO logs for better observability'
+        'Supporting Enterprise Data Warehouse initiatives by working with AWS S3, Glue, Athena, DynamoDB, Step Functions, and cloud-based data processing workflows.',
+        'Contributing to a data lineage initiative that helps trace dataset movement from source systems through transformations, landing zones, delivery zones, and downstream targets.',
+        'Analyzing SQL-based transformation logic and cloud pipeline dependencies to improve visibility into source-to-target data flows across the organization.',
+        'Collaborating on data governance improvements by documenting dataset relationships, pipeline steps, and transformation rules for better debugging and operational transparency.'
       ],
-      stack: ['Python', 'Django', 'Google Cloud', 'Cloud Logging', 'APIs']
+      stack: [
+        'AWS S3',
+        'AWS Glue',
+        'AWS Athena',
+        'AWS Step Functions',
+        'DynamoDB',
+        'SQL',
+        'Python',
+        'Data Lineage',
+        'Data Governance',
+        'ETL',
+        'Enterprise Data Warehouse'
+      ]
+    },
+    {
+      id: 'kitme',
+      title: 'Data Science & AI Intern',
+      company: 'Kitme Inc.',
+      location: 'New York, United States',
+      startDate: 'Jan 2026',
+      endDate: 'May 2026',
+      current: false,
+      description: 'Led frontend product development and UI/UX engineering using React and TypeScript, while supporting AI/data product integrations and debugging to deliver a seamless user experience.',
+      achievements: [
+        'Engineered responsive, highly interactive product features using React and TypeScript, translating complex Figma wireframes into production-ready UI components.',
+        'Optimized visual consistency across product interfaces by refining spacing systems, typography hierarchy, and smooth, interactive transition details.',
+        'Streamlined collaborative design-to-code workflows to ensure pixel-perfect fidelity with design specifications and mobile responsiveness across all devices.',
+        'Contributed to data workflows and resolved technical debt by debugging AI-related pipelines, ensuring robust system stability and seamless API integrations.'
+      ],
+      stack: ['React', 'TypeScript', 'Figma to Code', 'Responsive UI', 'Python', 'AI Workflows']
     },
     {
       id: 'extern-ai',
@@ -118,6 +149,29 @@ I'm naturally curious. Whether I'm debugging complex cloud deployments or buildi
         💡 PROJECTS
      ============================ */
   projects: [
+    {
+      id: 8,
+      title: "StormSafe RAG",
+      category: "NLP & Retrieval-Augmented Generation",
+      technologies:
+        "Python, Streamlit, FAISS, Sentence Transformers, Hugging Face, RAG, LLM Evaluation",
+      image: "/images/stormsafe_rag.png",
+      github: "https://github.com/vibhutirohan/StormSafe-Disaster-Preparedness-RAG-System-",
+      description: [
+        "A disaster preparedness assistant that retrieves trusted emergency guidance using FAISS and generates grounded answers with open-source LLMs."
+      ]
+    },
+    {
+      id: 9,
+      title: "Smart Parking Spot Detection",
+      category: "Deep Learning & Computer Vision",
+      technologies:
+        "Python, PyTorch, YOLOv7, OpenCV, Roboflow, Object Detection",
+      image: "/images/smart_parking.png",
+      description: [
+        "A YOLOv7-based object detection project that identifies empty and occupied parking spots from real-world campus parking images."
+      ]
+    },
     {
       id: 6,
       title: "Treasure Hunt in a Foggy World",
@@ -177,8 +231,7 @@ I'm naturally curious. Whether I'm debugging complex cloud deployments or buildi
       technologies:
         "React, Node.js, Java, Spring Boot, MySQL, Docker, REST APIs",
       image: "/images/full stack.png",
-
-    }
+    },
   ],
 
   /* ============================

@@ -33,8 +33,7 @@ export default function Blog() {
                         <div className="animated-section">
                             <h1 className="blog-title">Blog</h1>
                             <p className="blog-subtitle">
-                                Technical insights, tutorials, and lessons learned from building data systems
-                                and machine learning applications.
+                                Technical notes on cloud data engineering, AI systems, data lineage, machine learning, and modern software architecture.
                             </p>
                         </div>
                     </div>
