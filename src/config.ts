@@ -49,13 +49,39 @@ I'm naturally curious. Whether I'm debugging complex cloud deployments or buildi
      ============================ */
   experiences: [
     {
+      id: 'nassau-frontend',
+      title: 'Frontend Developer Intern',
+      company: 'Nassau Financial Group',
+      location: 'Hartford, Connecticut, United States',
+      startDate: 'Aug 2026',
+      endDate: 'Present',
+      current: true,
+      description:
+        'Developing and enhancing customer-facing and internal enterprise applications through frontend development, backend integrations, and cloud-based services, with a focus on usability, business functionality, and reliable digital workflows.',
+      achievements: [
+        'Develop and enhance frontend and backend features across customer, agent, and employee applications using JavaScript, Vue.js, Node.js, REST APIs, and AWS services.',
+        'Implement UI enhancements, role-based functionality, product-specific business rules, and backend data mappings to support policy servicing, account values, documents, payments, and digital workflows.',
+        'Troubleshoot and improve end-to-end application flows by tracing issues across the UI, APIs, AWS Lambda functions, and backend services to deliver reliable and user-friendly solutions.'
+      ],
+      stack: [
+        'JavaScript',
+        'Vue.js',
+        'Node.js',
+        'REST APIs',
+        'AWS Lambda',
+        'AWS',
+        'HTML5',
+        'CSS3'
+      ]
+    },
+    {
       id: 'nassau',
       title: 'Data Engineering Intern',
       company: 'Nassau Financial Group',
       location: 'Hartford, Connecticut, United States',
       startDate: 'Jun 2026',
-      endDate: 'Present',
-      current: true,
+      endDate: 'Aug 2026',
+      current: false,
       description:
         'Working with the Enterprise Data Warehouse team on cloud-based data engineering, data governance, and lineage initiatives using AWS services and modern data pipeline workflows.',
       achievements: [
