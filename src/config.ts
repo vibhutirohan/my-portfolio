@@ -10,7 +10,9 @@ export const config = {
   social: {
     github: "vibhutirohan",
     email: "rohanvibhuti6@gmail.com",
-    location: "Connecticut, USA"
+    location: "Connecticut, USA",
+    resumeUrl: "https://drive.google.com/file/d/1U4g9F3RY9gtV-shzOf9e386A_nH522R6/view?usp=sharing",
+    resumeDownloadUrl: "https://drive.google.com/uc?export=download&id=1U4g9F3RY9gtV-shzOf9e386A_nH522R6"
   },
 
   about: {
